@@ -1,6 +1,7 @@
 import './App.css';
 import Searchbar from './Components/Searchbar';
-import Listofcountry from './Components/Listofcountry';
+import Homepage from './Components/Homepage';
+
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
         </div>
       </header>
       <div>
-        <Listofcountry/>
+        <Homepage/>
       </div>
+    
     </div>
 
   );
