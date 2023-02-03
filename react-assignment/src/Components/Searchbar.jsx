@@ -1,8 +1,11 @@
+
 export default function Searchbar(){
     return(
-        <input
+       
+        <input 
    type="text"
    placeholder="Search here"
     />
+   
 );
 }

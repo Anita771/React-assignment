@@ -26,3 +26,8 @@
   flex-wrap: wrap;
   flex-basis: 15%;
 }
+.country {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+}
