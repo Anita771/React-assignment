@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Searchbar from './Components/Searchbar';
 import Homepage from './Components/Homepage';
