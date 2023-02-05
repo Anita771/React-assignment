@@ -1,5 +1,4 @@
 export default function Homepage() {
-
     return (
         <div className='container'>
             <table>
@@ -14,24 +13,20 @@ export default function Homepage() {
 
                     </tr>
                 </thead>
+
                 <tbody>
 
                     <tr>
-                        <td>Flag</td>
-                        <td>Name</td>
-                        <td>Region</td>
-                        <td>Population</td>
+                        <td>flags</td>
+                        <td>name</td>
+                        <td>region</td>
+                        <td>population</td>
                         <td>languages</td>
                         <td>{'>'}</td>
-
                     </tr>
-
-
-
                 </tbody>
             </table>
-
-
         </div>
     );
 }
+

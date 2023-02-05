@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Searchbar from './Components/Searchbar';
 import Homepage from './Components/Homepage';
+import FetchAPI from './API/FetchApi';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       </header>
       <div>
         <Homepage/>
+        <FetchAPI/>
       </div>
     
     </div>
