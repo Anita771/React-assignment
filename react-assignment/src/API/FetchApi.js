@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 
 export default function FetchAPI() {
-    const [data,setdata]=useState ([]);
+    const [data, setdata] = useState([]);
 
     const apiGet = () => {
         fetch('https://restcountries.com/v3.1/all')
@@ -13,29 +13,49 @@ export default function FetchAPI() {
                 setdata(json);
 
             });
-        
+
     };
-useEffect(() => {
-    apiGet()
-},[])
+    useEffect(() => {
+        apiGet()
+    }, [])
     return (
-        <div>
-        <button on onClick={apiGet}>Fetch APi</button>
-        {/*<pre>{JSON.stringify(data, null, 2)}</pre>*/}
-        
-        <div>
-            <ul>
-{data.map((Object => 
-<li >{Object.flag},{Object.name.official},{Object.region},{Object.population},{Object.language.official}</li>
+        <div className='container'>
 
-)
-    
-    )}
-            </ul>
-            </div>
+            <table>
 
+                <thead>
+                    <tr>
+                        <th>Flag</th>
+                        <th>Name</th>
+                        <th>Region</th>
+                        <th>Population</th>
+                        <th>Language</th>
+                        <th>        </th>
+
+                    </tr>
+                </thead>
+
+                {data.map((Object =>
+                <tbody>
+                    
+
+
+                        <tr>
+                            <td>{Object.flag}</td>
+                            <td>{Object.name.common}</td>
+                            <td>{Object.region}</td>
+                            <td>{Object.population}</td>
+                            <td>languages</td>
+                            <td>{'>'}</td>
+                        </tr>
+                </tbody>
+                ))}
+                
+            </table>
         </div>
+       
+
     );
 
-}
-                        
+}  
+
