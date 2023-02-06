@@ -42,28 +42,24 @@ th,
 td {
   border: 1px solid #000000;
   text-align: left;
-  padding: 8px;
+  padding: 2px;
   font-size: 32px;
 }
-
+/*this table header*/
 th {
   background-color: #ffffff;
 }
-
+/*this table body*/
 td {
   background-color:#ffffff;
 }
 
-form {
-  display: flex;
-  gap: 5px;
-}
+
 
 form td:last-child {
   display: flex;
   justify-content: space-evenly;
+  height: 5cm;
 }
 
-form * {
-  font-size: 28px;
-}
+

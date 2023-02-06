@@ -2,9 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 
-export default function FetchAPI() {
+export default function FetchAPI(props) {
     const [data, setdata] = useState([]);
-
+    
     const apiGet = () => {
         fetch('https://restcountries.com/v3.1/all')
             .then((response) => response.json())
@@ -18,6 +18,8 @@ export default function FetchAPI() {
     useEffect(() => {
         apiGet()
     }, [])
+
+    
     return (
         <div className='container'>
 
@@ -35,27 +37,34 @@ export default function FetchAPI() {
                     </tr>
                 </thead>
 
-                {data.map((Object =>
-                <tbody>
-                    
+                {data.map((item => 
+                    <tbody>
+
 
 
                         <tr>
-                            <td>{Object.flag}</td>
-                            <td>{Object.name.common}</td>
-                            <td>{Object.region}</td>
-                            <td>{Object.population}</td>
-                            <td>languages</td>
-                            <td>{'>'}</td>
+                            <td>{item.flag}</td>
+                            <td>{item.name.common}</td>
+                            <td>{item.region}</td>
+                            <td>{item.population}</td>
+                           <td> <ul>
+                    {item.languages &&
+                      Object.values(item.languages).map((language) => (
+                        <li>{language}</li>
+                      ))}
+                  </ul>
+                  </td>
+                            <td>&gt;</td>
                         </tr>
-                </tbody>
+                    </tbody>
                 ))}
-                
+
             </table>
         </div>
-       
+        
+
 
     );
 
-}  
+}
 
