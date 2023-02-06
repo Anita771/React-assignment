@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 
-export default function FetchAPI(props) {
+export default function FetchAPI() {
     const [data, setdata] = useState([]);
     
     const apiGet = () => {
@@ -39,10 +39,7 @@ export default function FetchAPI(props) {
 
                 {data.map((item => 
                     <tbody>
-
-
-
-                        <tr>
+                       <tr>
                             <td>{item.flag}</td>
                             <td>{item.name.common}</td>
                             <td>{item.region}</td>
