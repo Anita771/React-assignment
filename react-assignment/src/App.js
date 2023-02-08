@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 import './App.css';
 import Searchbar from './Components/Searchbar';
 import FetchAPI from './API/FetchApi';
@@ -23,9 +22,9 @@ function App() {
       </header>
       <div>
         <FetchAPI/>
-      
         
       </div>
+      
     
     </div>
 

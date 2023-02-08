@@ -39,7 +39,7 @@ export default function FetchAPI() {
 
                 {data.map((item => 
                     <tbody>
-                       <tr>
+                       <tr key= {data.index}>
                             <td>{item.flag}</td>
                             <td>{item.name.common}</td>
                             <td>{item.region}</td>
@@ -47,7 +47,7 @@ export default function FetchAPI() {
                            <td> <ul>
                     {item.languages &&
                       Object.values(item.languages).map((language) => (
-                        <li>{language}</li>
+                        <li key= {data.index}>{language}</li>
                       ))}
                   </ul>
                   </td>
