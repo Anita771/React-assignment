@@ -10,7 +10,8 @@ export default function FetchAPI() {
             .then((response) => response.json())
             .then((json) => {
                 console.log(json);
-                setdata(json);
+                //used slide method to have five countries
+                setdata(json.slice(0,5));
 
             });
 
