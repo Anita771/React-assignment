@@ -2,7 +2,17 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 
-export default function FetchAPI() {
+export default function FetchAPI(props) {
+const [more, setMore] = useState(true);
+  const handleMoreClick = () => {
+    setMore(false);
+  };
+
+  const handleLessClick = () => {
+    setMore(true);
+  };
+
+
     const [data, setdata] = useState([]);
     
     const apiGet = () => {
@@ -20,6 +30,7 @@ export default function FetchAPI() {
         apiGet()
     }, [])
 
+   
     
     return (
         <div className='container'>
@@ -58,8 +69,18 @@ export default function FetchAPI() {
                 ))}
 
             </table>
+            
+        <div>
             <button className='button'> Load More Countries</button>
+            </div>
+           
+            
+        <div>
+            <button className='button'> Load Less Countries</button>
+            </div>
+           
         </div>
+
         
 
 
