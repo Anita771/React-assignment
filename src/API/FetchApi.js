@@ -58,6 +58,7 @@ export default function FetchAPI() {
                 ))}
 
             </table>
+            <button className='button'> Load More Countries</button>
         </div>
         
 
