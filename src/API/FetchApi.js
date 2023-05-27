@@ -2,18 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 
-export default function FetchAPI(props) {
-const [more, setMore] = useState(true);
-  const handleMoreClick = () => {
-    setMore(false);
-  };
+export default function FetchAPI() {
 
-  const handleLessClick = () => {
-    setMore(true);
-  };
-
-
-    const [data, setdata] = useState([]);
+const [data, setdata] = useState([]);
     
     const apiGet = () => {
         fetch('https://restcountries.com/v3.1/all')
@@ -21,7 +12,7 @@ const [more, setMore] = useState(true);
             .then((json) => {
                 console.log(json);
                 //used slide method to have five countries
-                setdata(json.slice(0,5));
+                setdata(json.slice(0,10));
 
             });
 

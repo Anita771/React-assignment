@@ -4,7 +4,7 @@ import Searchbar from './Components/Searchbar';
 import FetchAPI from './API/FetchApi';
 
 
-function App() {
+export default function App() {
   
   return (
     <div className="App">
@@ -31,4 +31,3 @@ function App() {
   );
 }
 
-export default App;
