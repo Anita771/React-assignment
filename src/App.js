@@ -2,6 +2,9 @@ import React from 'react'
 import './App.css';
 import Searchbar from './Components/Searchbar';
 import FetchAPI from './API/FetchApi';
+import Button from 'react-bootstrap/Button';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 export default function App() {
@@ -21,7 +24,9 @@ export default function App() {
         </div>
       </header>
       <div>
+        
         <FetchAPI/>
+        <Button>Hello</Button>
         
       </div>
       
