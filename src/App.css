@@ -29,7 +29,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  text-align: center;
+  gap: 15px;
   padding: 1rem;
 }
 
@@ -47,7 +48,7 @@ td {
 }
 /*this table header*/
 th {
-  background-color: #ffffff;
+  background-color: #13131304;
 }
 /*this table body*/
 td {
@@ -61,5 +62,17 @@ form td:last-child {
   justify-content: space-evenly;
   height: 5cm;
 }
+.pagination{
+  display: flex;
+  justify-content: center;
 
+
+}
+
+.fluid{
+  display: flex;
+  justify-content: space-evenly;
+  color: #445a85;
+
+}
 

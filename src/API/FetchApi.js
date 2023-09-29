@@ -1,16 +1,25 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import  Table  from 'react-bootstrap/Table';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 
 export default function FetchAPI() {
+
     const [data, setdata] = useState([]);
-    
     const apiGet = () => {
         fetch('https://restcountries.com/v3.1/all')
             .then((response) => response.json())
             .then((json) => {
                 console.log(json);
-                setdata(json);
+                //used slice method to have five countries
+                setdata(json.slice(0, 5)
+
+
+
+                );
 
             });
 
@@ -19,11 +28,12 @@ export default function FetchAPI() {
         apiGet()
     }, [])
 
-    
+
+
     return (
         <div className='container'>
 
-            <table>
+            <Table>
 
                 <thead>
                     <tr>
@@ -37,28 +47,30 @@ export default function FetchAPI() {
                     </tr>
                 </thead>
 
-                {data.map((item => 
+                {data.map((item =>
                     <tbody>
-                       <tr key= {data.index}>
+                        <tr key={data.index}>
                             <td>{item.flag}</td>
                             <td>{item.name.common}</td>
                             <td>{item.region}</td>
                             <td>{item.population}</td>
-                           <td> <ul>
-                    {item.languages &&
-                      Object.values(item.languages).map((language) => (
-                        <li key= {data.index}>{language}</li>
-                      ))}
-                  </ul>
-                  </td>
+                            <td> <ul>
+                                {item.languages &&
+                                    Object.values(item.languages).map((language) => (
+                                        <li key={data.index}>{language}</li>
+                                    ))}
+                            </ul>
+                            </td>
                             <td>&gt;</td>
                         </tr>
                     </tbody>
                 ))}
 
-            </table>
+            </Table>
+
+
+
         </div>
-        
 
 
     );
