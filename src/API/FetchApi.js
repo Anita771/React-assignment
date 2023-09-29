@@ -15,7 +15,7 @@ export default function FetchAPI() {
             .then((json) => {
                 console.log(json);
                 //used slice method to have five countries
-                setdata(json.slice(0, 10)
+                setdata(json.slice(0, 5)
 
 
 
