@@ -10,11 +10,11 @@ export default function Paginationdata (){
       <Pagination.Item>{1}</Pagination.Item>
       <Pagination.Ellipsis />
 
-      <Pagination.Item>{10}</Pagination.Item>
-      <Pagination.Item>{11}</Pagination.Item>
-      <Pagination.Item active>{12}</Pagination.Item>
-      <Pagination.Item>{13}</Pagination.Item>
-      <Pagination.Item disabled>{14}</Pagination.Item>
+      <Pagination.Item>{23}</Pagination.Item>
+      <Pagination.Item>{24}</Pagination.Item>
+      <Pagination.Item active>{25}</Pagination.Item>
+      <Pagination.Item>{26}</Pagination.Item>
+      <Pagination.Item disabled>{27}</Pagination.Item>
 
       <Pagination.Ellipsis />
       <Pagination.Item>{50}</Pagination.Item>
